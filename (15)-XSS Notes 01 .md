@@ -44,6 +44,47 @@
     ```
   - This payload attempts to execute JavaScript when an error occurs while loading an image. It’s another way to check for vulnerabilities.
 
+
+## XSS Payloads Using `alert()`, `prompt()`, and `confirm()`
+
+#### 1. Using `alert()`
+- **Purpose**: Displays a simple alert dialog.
+- **XSS Payload Example**:
+  ```html
+  <script>alert('XSS Detected!')</script>
+  ```
+- **Behavior**: If executed on a vulnerable site, this shows an alert box indicating that JavaScript can run in an unprotected context.
+
+#### 2. Using `prompt()`
+- **Purpose**: Displays a dialog box for user input.
+- **XSS Payload Example**:
+  ```html
+  <script>prompt('XSS Detected! Please enter something:')</script>
+  ```
+- **Behavior**: This shows a prompt dialog asking for input. If it appears, it indicates a vulnerability.
+
+#### 3. Using `confirm()`
+- **Purpose**: Displays a dialog box with OK and Cancel options.
+- **XSS Payload Example**:
+  ```html
+  <script>confirm('XSS Detected! Proceed?')</script>
+  ```
+- **Behavior**: This triggers a confirmation dialog. If the dialog appears, the site is vulnerable to XSS.
+
+### Testing for XSS Vulnerabilities
+1. **How to Test**:
+   - Find an input field on the target site.
+   - Enter one of the payloads (e.g., `<script>alert('XSS Detected!')</script>`) and submit.
+  
+2. **Observe the Response**:
+   - If an alert, prompt, or confirmation dialog appears, the site is vulnerable.
+   - Check the page source to see how your input was handled (raw vs. escaped).
+
 ### Summary
-- **Summary**: XSS can be a serious security threat. Always test input fields carefully to observe how they handle potentially malicious code. If you find that your code is executed or displayed without proper sanitization, then there is a security issue that needs to be addressed.
+- **`alert()`**: Shows a simple message.
+- **`prompt()`**: Collects user input.
+- **`confirm()`**: Confirms actions with OK/Cancel options.
+- All methods can demonstrate XSS vulnerabilities by executing JavaScript in the browser context.
+- Always ensure you have permission to test any website for vulnerabilities.
+- XSS can be a serious security threat. Always test input fields carefully to observe how they handle potentially malicious code. If you find that your code is executed or displayed without proper sanitization, then there is a security issue that needs to be addressed.
 
