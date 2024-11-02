@@ -83,3 +83,8 @@ https://example.com/api?callback=<script>alert('JSONP XSS')</script>
 ```
 
 ---
+
+1. [Post 01: PortSwigger - Cross-Site Scripting](https://portswigger.net/web-security/cross-site-scripting)
+2. [Post 02: LinkedIn - XSS by Vardaan](https://www.linkedin.com/pulse/xss-vardaan-cybersecurity-3bhkc/?trackingId=kWL1WMMEQaqe7W5sVFm%2F3A%3D%3D)
+3. [Post 03: Medium - A Comprehensive Guide to Cross-Site Scripting (XSS)](https://medium.com/@techmindxperts/a-comprehensive-guide-to-cross-site-scripting-xss-33814b84dfb3)
+4. [Post 04: Acunetix - Cross-Site Scripting](https://www.acunetix.com/websitesecurity/cross-site-scripting/#:~:text=In%20a%20Cross-site%20Scripting,vulnerable%20to%20Cross-site%20scripting.)
